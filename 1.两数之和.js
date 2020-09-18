@@ -11,7 +11,6 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    var twoSum = function(nums, target) {
         if(nums.length < 2) return -1;
         for(let i = 0; i < nums.length; i++){
             for(let j = i+1; j < nums.length; j++){
@@ -21,7 +20,6 @@ var twoSum = function(nums, target) {
             }
         }
         return -1
-    };
 };
 // @lc code=end
 
