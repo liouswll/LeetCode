@@ -10,7 +10,7 @@
  * @return {boolean}
  */
 var isValid = function(s) {
-
+    
 };
 // @lc code=end
 
