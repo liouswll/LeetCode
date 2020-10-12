@@ -31,19 +31,15 @@
 
 
 // 二
-// var isPalindrome = function(x) {
-//     if(x<0) {
-//         return false;
-//     } else if(String.prototype.split.call(x,'').reverse().join('') != x) {
-//         return false 
-//     }
-//     return true
-// };
-
-
-// 三
 var isPalindrome = function(x) {
-    
+    if(x<0) {
+        return false;
+    } else if(String.prototype.split.call(x,'').reverse().join('') != x) {   // 数字可以使用，string方法split，切割为字符串数组。
+        return false 
+    }
+    return true
 };
+
+
 // @lc code=end
 
