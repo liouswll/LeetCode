@@ -9,18 +9,19 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
-    
+var isValid = function (s) {
+    // 找到最内层的括号对，消去，重复此过程，若存在无法消去的字符则说明字符串无效。
+    while (s.length) {
+        var temp = s;
+        s = s.replace('()', '')
+        s = s.replace('[]', '')
+        s = s.replace('{}', '')
+        if (s == temp) return false
+    }
+    return true
 };
 // @lc code=end
 
-
-// 将(``[``{标记为正数，)``]``}相反
-// 字符串 → 数组，Every，按1取每一项值
-// 若为正，放入FILO（现进后出）栈q
-// 若为负，从栈q从弹出最后一项与当前项的值匹配
-// 字符串无效，返回Flase的情况
-// 字符个数为单数：ar.length % 2 !== 0
-// 2的值为负，栈q为空
-// 2的值为负，栈q最后一项不匹配
-// Every结束，栈q不为空
+var isValid = function (s) {
+    // 借鉴了国际站的实现思路，遍历字符串时，匹配到左括号时是将其相应的右括号进行了压栈，遇到右括时判断和栈顶元素是否相等即可，最后判断栈是否为空
+};
